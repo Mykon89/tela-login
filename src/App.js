@@ -14,22 +14,24 @@ export default function App() {
             <span className="login-form-title">Login</span>
 
             <div className="wrap-input">
-              <input type="email" />
-              <span data-placeholder="Email" />
+              <input className="input" type="email" />
+              <span className="focus-input" data-placeholder="Email" />
             </div>
 
             <div className="wrap-input">
-              <input type="password" />
-              <span data-placeholder="Password" />
+              <input className="input" type="password" />
+              <span className="focus-input" data-placeholder="Password" />
             </div>
 
-            <div>
-              <button>LOGIN</button>
+            <div className="container-login-form-btn">
+              <button className="login-form-btn">LOGIN</button>
             </div>
 
-            <div>
-              <span>não possui conta?</span>
-              <a href="#">Criar conta.</a>
+            <div className="text-center">
+              <span className="txt1">não possui conta?</span>
+              <a href="#" className="txt2">
+                Criar conta.
+              </a>
             </div>
           </form>
         </div>
