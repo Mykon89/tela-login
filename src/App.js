@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import Logo from './assets/logo.svg';
 import './styles.css';
 
 export default function App() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <div className="container">
       <div className="container-login">
@@ -14,12 +17,23 @@ export default function App() {
             <span className="login-form-title">Login</span>
 
             <div className="wrap-input">
-              <input className="input" type="email" />
+              <input
+                // if ternário
+                className={email !== '' ? 'has-val input' : 'input'}
+                type="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
               <span className="focus-input" data-placeholder="Email" />
             </div>
 
             <div className="wrap-input">
-              <input className="input" type="password" />
+              <input
+                className={password !== '' ? 'has-val input' : 'input'}
+                type="password"
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+              />
               <span className="focus-input" data-placeholder="Password" />
             </div>
 
@@ -28,8 +42,8 @@ export default function App() {
             </div>
 
             <div className="text-center">
-              <span className="txt1">não possui conta?</span>
-              <a href="#" className="txt2">
+              <span className="txt1">Não possui conta?</span>
+              <a href="#ahref" id="ahref" className="txt2">
                 Criar conta.
               </a>
             </div>

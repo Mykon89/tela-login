@@ -7,6 +7,7 @@
 .container {
   width: 100%;
   margin: 0 auto;
+  background-color: black;
 }
 
 .container-login {
@@ -15,17 +16,15 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 15px;
   justify-content: center;
-  background-color: black;
 }
 
 .wrap-login {
-  width: 50%;
-  background-color: #333;
+  background-color: rgba(71, 71, 71, 0.4);
+  backdrop-filter: blur(8px);
   border-radius: 10px;
   overflow: hidden;
-  padding: 78px 56px 34px 56px;
+  padding: 56px 56px;
 }
 
 .login-form {
@@ -44,6 +43,7 @@
   width: 50px;
   height: 50px;
   border-radius: 100%;
+  margin: 10px;
 }
 
 .wrap-input {
@@ -88,6 +88,7 @@
 .focus-input::after {
   display: block;
   position: absolute;
+  transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -webkit-transition: all 0.4s;
@@ -116,11 +117,13 @@
   outline: 0;
 }
 
-.input:focus + .focus-input::after {
+.input:focus + .focus-input::after,
+.has-val + .focus-input::after {
   top: -15px;
 }
 
-.input:focus + .focus-input::before {
+.input:focus + .focus-input::before,
+.has-val + .focus-input::before {
   width: 100%;
 }
 
