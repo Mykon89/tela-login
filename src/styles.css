@@ -24,7 +24,7 @@
   backdrop-filter: blur(8px);
   border-radius: 10px;
   overflow: hidden;
-  padding: 56px 56px;
+  padding: 45px 75px;
 }
 
 .login-form {
@@ -33,24 +33,24 @@
 
 .login-form-title {
   display: block;
-  font-size: 20px;
+  font-size: 32px;
   color: white;
   line-height: 1.2;
   text-align: center;
+  padding: 0px 0px 16px 0px;
 }
 
 .login-form-title img {
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  margin: 10px;
 }
 
 .wrap-input {
   width: 100%;
   position: relative;
   border-bottom: 2px solid gray;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 }
 
 .input {
@@ -119,7 +119,7 @@
 
 .input:focus + .focus-input::after,
 .has-val + .focus-input::after {
-  top: -15px;
+  top: -12px;
 }
 
 .input:focus + .focus-input::before,
